@@ -10,10 +10,10 @@
 		5D88A86C1B1E33B100A28F4C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D88A86B1B1E33B100A28F4C /* main.m */; };
 		5D88A86F1B1E33B100A28F4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D88A86E1B1E33B100A28F4C /* AppDelegate.m */; };
 		5D88A8721B1E33B100A28F4C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D88A8711B1E33B100A28F4C /* ViewController.m */; };
-		5D88A8751B1E33B100A28F4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D88A8731B1E33B100A28F4C /* Main.storyboard */; };
 		5D88A8771B1E33B100A28F4C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D88A8761B1E33B100A28F4C /* Images.xcassets */; };
 		5D88A87A1B1E33B100A28F4C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D88A8781B1E33B100A28F4C /* LaunchScreen.xib */; };
 		5D88A8861B1E33B100A28F4C /* AlcolatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D88A8851B1E33B100A28F4C /* AlcolatorTests.m */; };
+		5D9D8BAB1B2262F400E1EE6C /* WhiskeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9D8BAA1B2262F400E1EE6C /* WhiskeyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +34,13 @@
 		5D88A86E1B1E33B100A28F4C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5D88A8701B1E33B100A28F4C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5D88A8711B1E33B100A28F4C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		5D88A8741B1E33B100A28F4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D88A8761B1E33B100A28F4C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5D88A8791B1E33B100A28F4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		5D88A87F1B1E33B100A28F4C /* AlcolatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlcolatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D88A8841B1E33B100A28F4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D88A8851B1E33B100A28F4C /* AlcolatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlcolatorTests.m; sourceTree = "<group>"; };
+		5D9D8BA91B2262F400E1EE6C /* WhiskeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiskeyViewController.h; sourceTree = "<group>"; };
+		5D9D8BAA1B2262F400E1EE6C /* WhiskeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhiskeyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +82,12 @@
 		5D88A8681B1E33B100A28F4C /* Alcolator */ = {
 			isa = PBXGroup;
 			children = (
+				5D9D8BA91B2262F400E1EE6C /* WhiskeyViewController.h */,
+				5D9D8BAA1B2262F400E1EE6C /* WhiskeyViewController.m */,
 				5D88A86D1B1E33B100A28F4C /* AppDelegate.h */,
 				5D88A86E1B1E33B100A28F4C /* AppDelegate.m */,
 				5D88A8701B1E33B100A28F4C /* ViewController.h */,
 				5D88A8711B1E33B100A28F4C /* ViewController.m */,
-				5D88A8731B1E33B100A28F4C /* Main.storyboard */,
 				5D88A8761B1E33B100A28F4C /* Images.xcassets */,
 				5D88A8781B1E33B100A28F4C /* LaunchScreen.xib */,
 				5D88A8691B1E33B100A28F4C /* Supporting Files */,
@@ -199,7 +201,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D88A8751B1E33B100A28F4C /* Main.storyboard in Resources */,
 				5D88A87A1B1E33B100A28F4C /* LaunchScreen.xib in Resources */,
 				5D88A8771B1E33B100A28F4C /* Images.xcassets in Resources */,
 			);
@@ -220,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D88A8721B1E33B100A28F4C /* ViewController.m in Sources */,
+				5D9D8BAB1B2262F400E1EE6C /* WhiskeyViewController.m in Sources */,
 				5D88A86F1B1E33B100A28F4C /* AppDelegate.m in Sources */,
 				5D88A86C1B1E33B100A28F4C /* main.m in Sources */,
 			);
@@ -244,14 +246,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5D88A8731B1E33B100A28F4C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5D88A8741B1E33B100A28F4C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5D88A8781B1E33B100A28F4C /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -350,6 +344,7 @@
 				INFOPLIST_FILE = Alcolator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -360,6 +355,7 @@
 				INFOPLIST_FILE = Alcolator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -416,6 +412,7 @@
 				5D88A88B1B1E33B100A28F4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5D88A88C1B1E33B100A28F4C /* Build configuration list for PBXNativeTarget "AlcolatorTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +421,7 @@
 				5D88A88E1B1E33B100A28F4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
