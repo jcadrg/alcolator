@@ -14,6 +14,68 @@
 
 @implementation WhiskeyViewController
 
+- (void) viewDidLoad {
+    [super viewDidLoad];
+    self.title = NSLocalizedString(@"Whiskey", @"whiskey");
+}
+
+
+- (void)sliderValueDidChange:(UISlider *)sender {
+    NSLog(@"Slider value changed to %f",sender.value);
+    [self.beerPercentTextField resignFirstResponder];
+    int beerCount=self.beerCountSlider.value;
+    
+    NSString * beerCounterText;
+    
+    if(beerCount==1){
+        beerCounterText= NSLocalizedString(@"beer", "singular beer");
+    }else{
+        beerCounterText=NSLocalizedString(@"beers", "plural of beer");
+        
+    }
+    
+    NSString *beerResultText =[NSString stringWithFormat:NSLocalizedString(@"%d %@", nil), beerCount,beerCounterText];
+    self.beerResultLabel.text=beerResultText;
+    
+    int ouncesInOneBeerGlass=12;
+    
+    float alcoholPercentageOfBeer = [self.beerPercentTextField.text floatValue]/100;
+    float ouncesOfAlcoholPerBeer = ouncesInOneBeerGlass * alcoholPercentageOfBeer;
+    float ouncesOfAlcoholTotal = ouncesOfAlcoholPerBeer*beerCount;
+    
+    
+    float ouncesInOneWhiskeyGlass = 1;
+    float alcoholPercentageOfWhiskey = 0.4;
+    
+    float ouncesOfAlcoholPerWhiskeyGlass = ouncesInOneWhiskeyGlass*alcoholPercentageOfWhiskey;
+    float numberOfWineGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal/ ouncesOfAlcoholPerWhiskeyGlass;
+    
+    NSString * beerText;
+    
+    if(beerCount==1){
+        beerText= NSLocalizedString(@"beer", "singular beer");
+    }else{
+        beerText=NSLocalizedString(@"beers", "plural of beer");
+        
+    }
+    
+    NSString * whiskeyText;
+    if(numberOfWineGlassesForEquivalentAlcoholAmount==1){
+        whiskeyText=NSLocalizedString(@"shot", "singular shot");
+    }else{
+        whiskeyText=NSLocalizedString(@"shots", "plural of shot");
+    }
+    
+    NSString *resultText =[NSString stringWithFormat:NSLocalizedString(@"%d %@ contains as much alcohol as %.1f %@ of whiskey.", nil), beerCount,beerText, numberOfWineGlassesForEquivalentAlcoholAmount,whiskeyText];
+    self.resultLabel.text=resultText;
+    
+    
+    
+}
+
+
+
+
 - (void)buttonPressed:(UIButton *)sender;
 {
     [self.beerPercentTextField resignFirstResponder];

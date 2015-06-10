@@ -94,6 +94,8 @@
     //self.resultLabel.layer.cornerRadius = 20;
     self.calculateButton.titleLabel.font = [UIFont fontWithName:@"AvenirNext-Bold" size:20];
     
+    self.title = NSLocalizedString(@"Wine", @"wine");
+    
 }
 -(void) viewWillLayoutSubviews{
     [super viewWillLayoutSubviews];
@@ -104,10 +106,10 @@
     CGFloat itemWidth = viewWidth - padding - padding;
     CGFloat itemHeight =44;
     
-    self.beerPercentTextField.frame=CGRectMake(padding, padding, itemWidth, itemHeight);
+    self.beerPercentTextField.frame=CGRectMake(padding, padding+itemHeight, itemWidth, itemHeight);
     
     CGFloat bottomOfTextField = CGRectGetMaxY(self.beerPercentTextField.frame);
-    self.beerCountSlider.frame = CGRectMake(padding, bottomOfTextField + padding, itemWidth, itemHeight);
+    self.beerCountSlider.frame = CGRectMake(padding, bottomOfTextField + padding+itemHeight, itemWidth, itemHeight);
     
     CGFloat bottomOfSlider = CGRectGetMaxY(self.beerCountSlider.frame);
     self.beerResultLabel.frame=CGRectMake(padding, bottomOfSlider+padding, itemWidth, itemHeight);

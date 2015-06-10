@@ -13,6 +13,7 @@
 		5D88A8771B1E33B100A28F4C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D88A8761B1E33B100A28F4C /* Images.xcassets */; };
 		5D88A87A1B1E33B100A28F4C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D88A8781B1E33B100A28F4C /* LaunchScreen.xib */; };
 		5D88A8861B1E33B100A28F4C /* AlcolatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D88A8851B1E33B100A28F4C /* AlcolatorTests.m */; };
+		5D8C8F6B1B28CDCA0097DBBC /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8C8F6A1B28CDCA0097DBBC /* MainMenuViewController.m */; };
 		5D9D8BAB1B2262F400E1EE6C /* WhiskeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9D8BAA1B2262F400E1EE6C /* WhiskeyViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,8 @@
 		5D88A87F1B1E33B100A28F4C /* AlcolatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlcolatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D88A8841B1E33B100A28F4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D88A8851B1E33B100A28F4C /* AlcolatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlcolatorTests.m; sourceTree = "<group>"; };
+		5D8C8F691B28CDCA0097DBBC /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
+		5D8C8F6A1B28CDCA0097DBBC /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
 		5D9D8BA91B2262F400E1EE6C /* WhiskeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiskeyViewController.h; sourceTree = "<group>"; };
 		5D9D8BAA1B2262F400E1EE6C /* WhiskeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhiskeyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +89,8 @@
 				5D9D8BAA1B2262F400E1EE6C /* WhiskeyViewController.m */,
 				5D88A86D1B1E33B100A28F4C /* AppDelegate.h */,
 				5D88A86E1B1E33B100A28F4C /* AppDelegate.m */,
+				5D8C8F691B28CDCA0097DBBC /* MainMenuViewController.h */,
+				5D8C8F6A1B28CDCA0097DBBC /* MainMenuViewController.m */,
 				5D88A8701B1E33B100A28F4C /* ViewController.h */,
 				5D88A8711B1E33B100A28F4C /* ViewController.m */,
 				5D88A8761B1E33B100A28F4C /* Images.xcassets */,
@@ -224,6 +229,7 @@
 				5D9D8BAB1B2262F400E1EE6C /* WhiskeyViewController.m in Sources */,
 				5D88A86F1B1E33B100A28F4C /* AppDelegate.m in Sources */,
 				5D88A86C1B1E33B100A28F4C /* main.m in Sources */,
+				5D8C8F6B1B28CDCA0097DBBC /* MainMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
