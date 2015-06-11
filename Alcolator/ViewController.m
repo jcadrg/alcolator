@@ -94,7 +94,9 @@
     //self.resultLabel.layer.cornerRadius = 20;
     self.calculateButton.titleLabel.font = [UIFont fontWithName:@"AvenirNext-Bold" size:20];
     
-    self.title = NSLocalizedString(@"Wine", @"wine");
+    self.resultLabel.numberOfLines = 0;
+    //self.title = NSLocalizedString(@"Wine", @"wine");
+    self.view.backgroundColor =[UIColor colorWithRed:0.741 green:0.925 blue:0.714 alpha:1];
     
 }
 -(void) viewWillLayoutSubviews{
@@ -141,6 +143,7 @@
 - (void)sliderValueDidChange:(UISlider *)sender {
     NSLog(@"Slider value changed to %f",sender.value);
     [self.beerPercentTextField resignFirstResponder];
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d",(int) sender.value]];
     int beerCount=self.beerCountSlider.value;
     
     NSString * beerCounterText;
@@ -186,6 +189,8 @@
     
     NSString *resultText =[NSString stringWithFormat:NSLocalizedString(@"%d %@ contains as much alcohol as %.1f %@ of wine.", nil), beerCount,beerText, numberOfWineGlassesForEquivalentAlcoholAmount,wineText];
     self.resultLabel.text=resultText;
+    
+    
     
     
     
@@ -236,6 +241,19 @@
     
     [self.beerPercentTextField resignFirstResponder];
 }
+
+- (instancetype) init {
+    self = [super init];
+    
+    if (self) {
+        self.title = NSLocalizedString(@"Wine", @"wine");
+        [self.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, -18)];
+    }
+    
+    return self;
+}
+
+
 
 
 

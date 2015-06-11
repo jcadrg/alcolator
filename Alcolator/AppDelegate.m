@@ -8,11 +8,12 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-#import "MainMenuViewController.h"
+#import "WhiskeyViewController.h"
+//#import "MainMenuViewController.h"
 
 
 
-@interface AppDelegate ()
+@interface AppDelegate () <UITabBarControllerDelegate>
 
 @end
 
@@ -22,14 +23,25 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window=[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    MainMenuViewController *mainMenuViewController = [[MainMenuViewController alloc] init];
+    /*MainMenuViewController *mainMenuViewController = [[MainMenuViewController alloc] init];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainMenuViewController];
-    self.window.rootViewController = navigationController;
+    self.window.rootViewController = navigationController;*/
+    
+    ViewController *wineVC = [[ViewController alloc] init];
+    WhiskeyViewController *whiskeyVC = [[WhiskeyViewController alloc] init];
+    UITabBarController *tabBarVC = [[UITabBarController alloc] init];
+    tabBarVC.viewControllers = @[wineVC, whiskeyVC];
+    
+    self.window.rootViewController = tabBarVC;
     
     [self.window makeKeyAndVisible];
-
+    
+    tabBarVC.delegate = self;
+    
+    
     return YES;
 }
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -52,5 +64,12 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+#pragma mark - UITabBarControllerDelegate
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+    NSLog(@"New view controller selected: [%@]",[viewController title]);
+}
+
 
 @end
